@@ -16,7 +16,12 @@ function crearElementos(tipo, column, data, id) {
     const h5Text = document.createTextNode(data);
     h5.appendChild(h5Text);
     //h5.classList += "dato mui--text-subhead";
-    h5.setAttribute("class", `dato mui--text-subhead`);
+    if (id % 2 == 0) {
+        h5.setAttribute("class", `dato mui--text-subhead`);
+    }
+    else {
+        h5.setAttribute("class", "dato mui--text-subhead fondoGris");
+    }
     h5.setAttribute("id", `${tipo}${id}`);
     h5.addEventListener("click", () => { activateModal(id); });
     column.appendChild(h5);
