@@ -41,6 +41,13 @@ function activateModal(id) {
     // initialize modal element
     var modalEl = document.createElement('div');
     modalEl.setAttribute("class", "modalEl");
+
+    const perfil = document.createElement('h1');
+    perfil.setAttribute("class", "mui--text-display1");
+    const perfilText = document.createTextNode("Perfil");
+    perfil.appendChild(perfilText);
+    modalEl.appendChild(perfil);
+
     const imageAndName = document.createElement('div');
     imageAndName.setAttribute("class", "imageAndName");
 
@@ -49,7 +56,7 @@ function activateModal(id) {
     img.setAttribute("class", "imgModal");
     imageAndName.appendChild(img);
     const name = document.createElement('h2');
-    name.setAttribute("class", "mui--text-headline tituloModal");
+    name.setAttribute("class", "mui--text-headline");
     const nameText = document.createTextNode(document.getElementById(`name${id}`).innerText);
     name.appendChild(nameText);
     imageAndName.appendChild(name);
